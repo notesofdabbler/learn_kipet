@@ -1,4 +1,4 @@
-Solver command line: ['/home/paperspace/CoinIpopt/build/bin/ipopt', '/tmp/tmp3m1s80bo.pyomo.nl', '-AMPL']
+Solver command line: ['/home/paperspace/CoinIpopt/build/bin/ipopt', '/tmp/tmpossruue_.pyomo.nl', '-AMPL']
 
 Ipopt 3.12: 
 
@@ -245,8 +245,8 @@ Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 184
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 183
-Total CPU secs in IPOPT (w/o function evaluations)   =      0.724
-Total CPU secs in NLP function evaluations           =      0.048
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.576
+Total CPU secs in NLP function evaluations           =      0.060
 
 EXIT: Optimal Solution Found.
 

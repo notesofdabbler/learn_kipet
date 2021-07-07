@@ -1,0 +1,126 @@
+########################################
+# KIPET version 1.0.3
+# Date: 2021-07-07-13-14-46
+# File: <ipython-input-21-157868483296>
+# ReactionModel instance: reaction1
+########################################
+
+# Simulator: Initializing with starting values
+# Simulator: Using the fe method
+# Simulator: Setting up simulation model
+# TemplateBuilder: Preparing model for simulator
+WARNING: More finite elements were found in ContinuousSet 'alltime' than the
+    number of finite elements specified in apply. The larger number of finite
+    elements will be used.
+# Simulator: Finished creating simulator
+# Simulator: Completed successfully
+
+# VarianceEsitmator: Creating instance
+# Warning: Template already populated
+ReactionModel: Generating base model (self._model)
+# TemplateBuilder: Preparing model for p_estimator
+# TemplateBuilder: Preparing model for v_estimator
+WARNING: More finite elements were found in ContinuousSet 'alltime' than the
+    number of finite elements specified in apply. The larger number of finite
+    elements will be used.
+# VarianceEstimator: Starting the variance estimator using originalchenetal method
+Solving Initialization Problem
+
+Ipopt 3.13.4: linear_solver=ma27
+nlp_scaling_method=gradient-based
+max_iter=15000
+
+Exception of type: OPTION_INVALID in file "../../../src/Algorithm/IpAlgBuilder.cpp" at line 268:
+ Exception message: Selected linear solver MA27 not available.
+Tried to obtain MA27 from shared library "libhsl.so", but the following error occured:
+libhsl.so: cannot open shared object file: No such file or directory
+
+EXIT: Invalid option encountered.
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+       Iter            |Zi-Zi+1|
+          1 1.0378590764581475e-09
+Iterative optimization converged. Estimating variances now
+# VarianceEstimator: Complete
+
+# VarianceEstimator: All variances provided / concentration problem
+
+# ParameterEstimator: Creating instance
+
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for p_estimator
+WARNING: More finite elements were found in ContinuousSet 'alltime' than the
+    number of finite elements specified in apply. The larger number of finite
+    elements will be used.
+# ParameterEstimator: The variances being used are:
+ {'A': 2.3163009820804196e-21, 'B': 0.0, 'C': 1.720509683600528e-21, 'device': 0.009986733912640012}
+# ParameterEstimator: Solving the parameter fitting problem...
+
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1762, in run_opt
+    results = self._run_opt_core()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1891, in _run_opt_core
+    self._run_pe_opt()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1673, in _run_pe_opt
+    self._run_opt('p_estimator', **pe_settings)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1930, in _run_opt
+    self.results_dict[estimator] = getattr(self, estimator).run_opt(*args, **kwargs)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 181, in run_opt
+    self.objective_value = self._solve_model(
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 304, in _solve_model
+    self._concentration_spectra_term(model, sigma_sq)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 409, in _concentration_spectra_term
+    obj += sum((model.C[t, k] - model.Z[t, k]) ** 2 / sigma_sq[k] for k in self.comps['unknown_absorbance'])
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 409, in <genexpr>
+    obj += sum((model.C[t, k] - model.Z[t, k]) ** 2 / sigma_sq[k] for k in self.comps['unknown_absorbance'])
+  File "pyomo/core/expr/numvalue.pyx", line 801, in pyomo.core.expr.numvalue.NumericValue.__truediv__
+  File "pyomo/core/expr/numeric_expr.pyx", line 1835, in pyomo.core.expr.numeric_expr._generate_mul_expression
+ZeroDivisionError
+########################################
+# KIPET version 1.0.3
+# Date: 2021-07-07-13-14-46
+# File: <ipython-input-21-157868483296>
+# ReactionModel instance: reaction1
+########################################
+
+# Simulator: Initializing with starting values
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/calculation_tools/helper.py", line 20, in __getattr__
+    return self[name]
+KeyError: 'method'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1762, in run_opt
+    results = self._run_opt_core()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1791, in _run_opt_core
+    print(f'# Simulator: Using the {self.settings.simulator.method} method')
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/calculation_tools/helper.py", line 22, in __getattr__
+    raise AttributeError(name)
+AttributeError: method
+########################################
+# KIPET version 1.0.3
+# Date: 2021-07-07-13-14-46
+# File: <ipython-input-21-157868483296>
+# ReactionModel instance: reaction1
+########################################
+
+# Simulator: Initializing with starting values
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/calculation_tools/helper.py", line 20, in __getattr__
+    return self[name]
+KeyError: 'method'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1762, in run_opt
+    results = self._run_opt_core()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1791, in _run_opt_core
+    print(f'# Simulator: Using the {self.settings.simulator.method} method')
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/calculation_tools/helper.py", line 22, in __getattr__
+    raise AttributeError(name)
+AttributeError: method

@@ -2,7 +2,7 @@
 #######################Iteration 0#######################
 
 #######################Solve Z 0#######################
-Solver command line: ['/home/paperspace/CoinIpopt/build/bin/ipopt', '/tmp/tmpf175uf2u.pyomo.nl', '-AMPL']
+Solver command line: ['/home/paperspace/CoinIpopt/build/bin/ipopt', '/tmp/tmpmzfaexjb.pyomo.nl', '-AMPL']
 
 Ipopt 3.12: 
 
@@ -74,8 +74,8 @@ Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 25
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 24
-Total CPU secs in IPOPT (w/o function evaluations)   =      0.056
-Total CPU secs in NLP function evaluations           =      0.004
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.084
+Total CPU secs in NLP function evaluations           =      0.012
 
 EXIT: Optimal Solution Found.
 
@@ -118,7 +118,7 @@ Function evaluations 19, initial cost 4.2607e-02, final cost 3.2228e-02, first-o
 #######################Iteration 1#######################
 
 #######################Solve Z 1#######################
-Solver command line: ['/home/paperspace/CoinIpopt/build/bin/ipopt', '/tmp/tmpohf7lnw0.pyomo.nl', '-AMPL']
+Solver command line: ['/home/paperspace/CoinIpopt/build/bin/ipopt', '/tmp/tmpyonoo568.pyomo.nl', '-AMPL']
 
 Ipopt 3.12: 
 
@@ -186,8 +186,8 @@ Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 21
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 20
-Total CPU secs in IPOPT (w/o function evaluations)   =      0.040
-Total CPU secs in NLP function evaluations           =      0.008
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.056
+Total CPU secs in NLP function evaluations           =      0.024
 
 EXIT: Optimal Solution Found.
 

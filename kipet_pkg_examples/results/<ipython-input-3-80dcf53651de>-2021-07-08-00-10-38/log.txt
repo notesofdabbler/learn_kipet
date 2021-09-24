@@ -1,0 +1,35 @@
+# Simulator: Setting up simulation model
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1288, in simulate
+    self._simulate_core(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1308, in _simulate_core
+    self._run_simulation(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1376, in _run_simulation
+    self._call_fe_factory()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 732, in _call_fe_factory
+    self.simulator.call_fe_factory(
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_simulator.py", line 86, in call_fe_factory
+    init = FEInitialize(self.model,
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_factory.py", line 372, in __init__
+    raise Exception("Inconsistent problem; n={}, m={}".format(n, m))
+Exception: Inconsistent problem; n=90, m=82
+# Simulator: Setting up simulation model
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1288, in simulate
+    self._simulate_core(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1308, in _simulate_core
+    self._run_simulation(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1376, in _run_simulation
+    self._call_fe_factory()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 732, in _call_fe_factory
+    self.simulator.call_fe_factory(
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_simulator.py", line 86, in call_fe_factory
+    init = FEInitialize(self.model,
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_factory.py", line 372, in __init__
+    raise Exception("Inconsistent problem; n={}, m={}".format(n, m))
+Exception: Inconsistent problem; n=90, m=82

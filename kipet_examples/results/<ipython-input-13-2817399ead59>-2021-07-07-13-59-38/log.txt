@@ -1,0 +1,82 @@
+########################################
+# KIPET version 1.0.3
+# Date: 2021-07-07-13-59-38
+# File: <ipython-input-13-2817399ead59>
+# ReactionModel instance: reaction-1
+########################################
+
+# Simulator: Initializing with starting values
+# Simulator: Using the fe method
+# Simulator: Setting up simulation model
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+# Simulator: Completed successfully
+
+# VarianceEstimator: All variances provided / concentration problem
+
+# ParameterEstimator: Creating instance
+
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for p_estimator
+# ParameterEstimator: The variances being used are:
+ {'A': 1, 'B': 1, 'C': 1}
+# ParameterEstimator: Solving the parameter fitting problem...
+
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+WARNING: The solution of the iteration was unsuccessful. The problem is solved with additional solver options.
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+WARNING: The solution of the iteration was unsuccessful. The problem is solved with additional solver options.
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+The current iteration was unsuccessful.
+
+# Parameter Values
+             k1 = 2.0000e+00
+             k2 = 2.0000e-01
+              A = 1.0000e-03
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1762, in run_opt
+    results = self._run_opt_core()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1891, in _run_opt_core
+    self._run_pe_opt()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1673, in _run_pe_opt
+    self._run_opt('p_estimator', **pe_settings)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1930, in _run_opt
+    self.results_dict[estimator] = getattr(self, estimator).run_opt(*args, **kwargs)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 192, in run_opt
+    return self._get_results()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 217, in _get_results
+    raise Exception("The current iteration was unsuccessful.")
+Exception: The current iteration was unsuccessful.
+########################################
+# KIPET version 1.0.3
+# Date: 2021-07-07-13-59-38
+# File: <ipython-input-13-2817399ead59>
+# ReactionModel instance: reaction-1
+########################################
+
+# Simulator: Initializing with starting values
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/calculation_tools/helper.py", line 20, in __getattr__
+    return self[name]
+KeyError: 'method'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1762, in run_opt
+    results = self._run_opt_core()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1791, in _run_opt_core
+    print(f'# Simulator: Using the {self.settings.simulator.method} method')
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/calculation_tools/helper.py", line 22, in __getattr__
+    raise AttributeError(name)
+AttributeError: method

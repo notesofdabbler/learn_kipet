@@ -1,0 +1,3 @@
+# Simulator: Setting up simulation model
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator

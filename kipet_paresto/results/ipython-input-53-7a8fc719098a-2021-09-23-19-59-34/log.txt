@@ -1,0 +1,112 @@
+########################################
+# KIPET version 1.0.6
+# Date: 2021-09-23-19-59-34
+# File: <ipython-input-53-7a8fc719098a>
+# ReactionModel instance: rxn1
+########################################
+
+# Simulator: Initializing with starting values
+# Simulator: Using the fe method
+# Simulator: Setting up simulation model
+Warning! Since Cm-matrix contains negative values Kipet is assuming a derivative of Cm has been inputted
+Warning! Since Cm-matrix contains negative values Kipet is assuming a derivative of Cm has been inputted
+Warning! Since Cm-matrix contains negative values Kipet is assuming a derivative of Cm has been inputted
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Ipopt 3.13.4: 
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+This is Ipopt version 3.13.4, running with linear solver mumps.
+NOTE: Other linear solvers might be more efficient (see Ipopt documentation).
+
+Number of nonzeros in equality constraint Jacobian...:     4204
+Number of nonzeros in inequality constraint Jacobian.:        0
+Number of nonzeros in Lagrangian Hessian.............:        0
+
+Total number of variables............................:     1204
+                     variables with only lower bounds:        0
+                variables with lower and upper bounds:        0
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:     1204
+Total number of inequality constraints...............:        0
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:        0
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  0.0000000e+00 6.09e+01 0.00e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0
+   1  0.0000000e+00 2.84e-14 0.00e+00  -1.0 4.50e+00    -  1.00e+00 1.00e+00h  1
+
+Number of Iterations....: 1
+
+                                   (scaled)                 (unscaled)
+Objective...............:   0.0000000000000000e+00    0.0000000000000000e+00
+Dual infeasibility......:   0.0000000000000000e+00    0.0000000000000000e+00
+Constraint violation....:   2.4904934075255309e-14    2.8421709430404007e-14
+Complementarity.........:   0.0000000000000000e+00    0.0000000000000000e+00
+Overall NLP error.......:   2.4904934075255309e-14    2.8421709430404007e-14
+
+
+Number of objective function evaluations             = 2
+Number of objective gradient evaluations             = 2
+Number of equality constraint evaluations            = 2
+Number of inequality constraint evaluations          = 0
+Number of equality constraint Jacobian evaluations   = 2
+Number of inequality constraint Jacobian evaluations = 0
+Number of Lagrangian Hessian evaluations             = 1
+Total CPU secs in IPOPT (w/o function evaluations)   =      0.064
+Total CPU secs in NLP function evaluations           =      0.000
+
+EXIT: Optimal Solution Found.
+# Simulator: Completed successfully
+
+# VarianceEstimator: All variances provided / concentration problem
+
+# ParameterEstimator: Creating instance
+
+# Warning: Template already populated
+ReactionModel: Generating base model (self._model)
+# TemplateBuilder: Preparing model for p_estimator
+# TemplateBuilder: Preparing model for p_estimator
+# ParameterEstimator: The variances being used are:
+ {'A': 1, 'B': 1, 'C': 1}
+# ParameterEstimator: Solving the parameter fitting problem...
+
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+WARNING: The solution of the iteration was unsuccessful. The problem is solved with additional solver options.
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+WARNING: The solution of the iteration was unsuccessful. The problem is solved with additional solver options.
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+The current iteration was unsuccessful.
+
+# Parameter Values
+             k1 = 5.0000e+00
+             k2 = 5.0000e+00
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1773, in run_opt
+    results = self._run_opt_core()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1903, in _run_opt_core
+    self._run_pe_opt()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1687, in _run_pe_opt
+    self._run_opt('p_estimator', **pe_settings)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1942, in _run_opt
+    self.results_dict[estimator] = getattr(self, estimator).run_opt(*args, **kwargs)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 192, in run_opt
+    return self._get_results()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 217, in _get_results
+    raise Exception("The current iteration was unsuccessful.")
+Exception: The current iteration was unsuccessful.

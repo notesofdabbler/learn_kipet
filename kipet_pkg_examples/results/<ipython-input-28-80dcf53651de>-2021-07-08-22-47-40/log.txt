@@ -1,0 +1,188 @@
+# Simulator: Setting up simulation model
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Ipopt 3.12: halt_on_ampl_error=yes
+
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit http://projects.coin-or.org/Ipopt
+******************************************************************************
+
+This is Ipopt version 3.12, running with linear solver ma27.
+
+Number of nonzeros in equality constraint Jacobian...:    40234
+Number of nonzeros in inequality constraint Jacobian.:        0
+Number of nonzeros in Lagrangian Hessian.............:    10509
+
+Total number of variables............................:     7516
+                     variables with only lower bounds:        0
+                variables with lower and upper bounds:        0
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:     7516
+Total number of inequality constraints...............:        0
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:        0
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  0.0000000e+00 4.10e+01 0.00e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0
+ERROR: Solver (ipopt) returned non-zero return code (1)
+ERROR: See the solver log above for diagnostic information.
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1288, in simulate
+    self._simulate_core(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1308, in _simulate_core
+    self._run_simulation(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1385, in _run_simulation
+    results = self.simulator.run_sim(**simulator_options)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/pyomo_simulator.py", line 412, in run_sim
+    solver_results = opt.solve(self.model, tee=tee, symbolic_solver_labels=True)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/Pyomo-5.7.3-py3.8-linux-x86_64.egg/pyomo/opt/base/solvers.py", line 601, in solve
+    raise ApplicationError(
+pyutilib.common._exceptions.ApplicationError: Solver (ipopt) did not exit normally
+# Simulator: Setting up simulation model
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1288, in simulate
+    self._simulate_core(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1308, in _simulate_core
+    self._run_simulation(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1376, in _run_simulation
+    self._call_fe_factory()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 732, in _call_fe_factory
+    self.simulator.call_fe_factory(
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_simulator.py", line 86, in call_fe_factory
+    init = FEInitialize(self.model,
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_factory.py", line 372, in __init__
+    raise Exception("Inconsistent problem; n={}, m={}".format(n, m))
+Exception: Inconsistent problem; n=63, m=57
+# Simulator: Setting up simulation model
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1288, in simulate
+    self._simulate_core(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1308, in _simulate_core
+    self._run_simulation(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1376, in _run_simulation
+    self._call_fe_factory()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 732, in _call_fe_factory
+    self.simulator.call_fe_factory(
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_simulator.py", line 86, in call_fe_factory
+    init = FEInitialize(self.model,
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_factory.py", line 372, in __init__
+    raise Exception("Inconsistent problem; n={}, m={}".format(n, m))
+Exception: Inconsistent problem; n=63, m=57
+# Simulator: Setting up simulation model
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1288, in simulate
+    self._simulate_core(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1308, in _simulate_core
+    self._run_simulation(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1376, in _run_simulation
+    self._call_fe_factory()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 732, in _call_fe_factory
+    self.simulator.call_fe_factory(
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_simulator.py", line 86, in call_fe_factory
+    init = FEInitialize(self.model,
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/fe_factory.py", line 372, in __init__
+    raise Exception("Inconsistent problem; n={}, m={}".format(n, m))
+Exception: Inconsistent problem; n=90, m=82
+# Simulator: Setting up simulation model
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Ipopt 3.12: halt_on_ampl_error=yes
+
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit http://projects.coin-or.org/Ipopt
+******************************************************************************
+
+This is Ipopt version 3.12, running with linear solver ma27.
+
+Number of nonzeros in equality constraint Jacobian...:    40234
+Number of nonzeros in inequality constraint Jacobian.:        0
+Number of nonzeros in Lagrangian Hessian.............:    10509
+
+Total number of variables............................:     7516
+                     variables with only lower bounds:        0
+                variables with lower and upper bounds:        0
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:     7516
+Total number of inequality constraints...............:        0
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:        0
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  0.0000000e+00 4.10e+01 0.00e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0
+ERROR: Solver (ipopt) returned non-zero return code (1)
+ERROR: See the solver log above for diagnostic information.
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1288, in simulate
+    self._simulate_core(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1308, in _simulate_core
+    self._run_simulation(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1385, in _run_simulation
+    results = self.simulator.run_sim(**simulator_options)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/pyomo_simulator.py", line 412, in run_sim
+    solver_results = opt.solve(self.model, tee=tee, symbolic_solver_labels=True)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/Pyomo-5.7.3-py3.8-linux-x86_64.egg/pyomo/opt/base/solvers.py", line 601, in solve
+    raise ApplicationError(
+pyutilib.common._exceptions.ApplicationError: Solver (ipopt) did not exit normally
+# Simulator: Setting up simulation model
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+Ipopt 3.12: halt_on_ampl_error=yes
+
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit http://projects.coin-or.org/Ipopt
+******************************************************************************
+
+This is Ipopt version 3.12, running with linear solver ma27.
+
+Number of nonzeros in equality constraint Jacobian...:    25034
+Number of nonzeros in inequality constraint Jacobian.:        0
+Number of nonzeros in Lagrangian Hessian.............:     7009
+
+Total number of variables............................:     5016
+                     variables with only lower bounds:        0
+                variables with lower and upper bounds:        0
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:     5016
+Total number of inequality constraints...............:        0
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:        0
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  0.0000000e+00 4.10e+01 0.00e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0
+ERROR: Solver (ipopt) returned non-zero return code (1)
+ERROR: See the solver log above for diagnostic information.
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1288, in simulate
+    self._simulate_core(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1308, in _simulate_core
+    self._run_simulation(parameters)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1385, in _run_simulation
+    results = self.simulator.run_sim(**simulator_options)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/pyomo_simulator.py", line 412, in run_sim
+    solver_results = opt.solve(self.model, tee=tee, symbolic_solver_labels=True)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/Pyomo-5.7.3-py3.8-linux-x86_64.egg/pyomo/opt/base/solvers.py", line 601, in solve
+    raise ApplicationError(
+pyutilib.common._exceptions.ApplicationError: Solver (ipopt) did not exit normally

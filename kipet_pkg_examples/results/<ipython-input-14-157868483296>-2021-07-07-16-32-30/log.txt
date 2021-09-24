@@ -1,0 +1,150 @@
+########################################
+# KIPET version 1.0.3
+# Date: 2021-07-07-16-32-30
+# File: <ipython-input-14-157868483296>
+# ReactionModel instance: reaction1
+########################################
+
+# Simulator: Initializing with starting values
+# Simulator: Using the fe method
+# Simulator: Setting up simulation model
+# TemplateBuilder: Preparing model for simulator
+WARNING: More finite elements were found in ContinuousSet 'alltime' than the
+    number of finite elements specified in apply. The larger number of finite
+    elements will be used.
+# Simulator: Finished creating simulator
+# Simulator: Completed successfully
+
+# VarianceEsitmator: Creating instance
+# Warning: Template already populated
+ReactionModel: Generating base model (self._model)
+# TemplateBuilder: Preparing model for p_estimator
+# TemplateBuilder: Preparing model for v_estimator
+WARNING: More finite elements were found in ContinuousSet 'alltime' than the
+    number of finite elements specified in apply. The larger number of finite
+    elements will be used.
+# VarianceEstimator: Starting the variance estimator using originalchenetal method
+Solving Initialization Problem
+
+Ipopt 3.12: linear_solver=ma27
+nlp_scaling_method=gradient-based
+max_iter=15000
+
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit http://projects.coin-or.org/Ipopt
+******************************************************************************
+
+This is Ipopt version 3.12, running with linear solver ma27.
+
+Number of nonzeros in equality constraint Jacobian...:    39479
+Number of nonzeros in inequality constraint Jacobian.:        0
+Number of nonzeros in Lagrangian Hessian.............:   274196
+
+Total number of variables............................:    11073
+                     variables with only lower bounds:      300
+                variables with lower and upper bounds:        2
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:    10771
+Total number of inequality constraints...............:        0
+        inequality constraints with only lower bounds:        0
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:        0
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  1.5121366e+02 2.00e+00 6.33e+01  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0
+   1  1.1000645e+02 8.61e-01 7.71e+02  -1.0 1.09e+00   2.0 7.77e-01 6.86e-01f  1
+   2  5.5983364e+01 1.96e-01 5.30e+02  -1.0 8.88e-01   1.5 5.83e-01 1.00e+00f  1
+   3  8.7907707e+00 5.56e-02 6.20e+02  -1.0 3.04e-01   1.0 5.12e-01 1.00e+00f  1
+   4  3.1519363e+00 6.82e-03 3.80e+01  -1.0 1.59e-01   0.6 1.00e+00 1.00e+00f  1
+   5  9.2241634e-01 1.27e-04 1.50e+00  -1.0 6.13e-02   0.1 1.00e+00 1.00e+00f  1
+   6  1.0434863e+00 1.43e-04 6.10e-02  -1.0 1.75e-02  -0.4 1.00e+00 1.00e+00h  1
+   7  1.1682766e-01 3.59e-04 1.86e-01  -2.5 3.10e-02  -0.9 9.28e-01 1.00e+00f  1
+   8  9.4471842e-02 2.55e-06 2.42e-03  -2.5 1.14e-02  -1.3 1.00e+00 1.00e+00h  1
+   9  8.9827547e-02 1.06e-05 7.37e-03  -3.8 6.56e-03  -1.8 9.98e-01 1.00e+00h  1
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+  10  8.9554829e-02 1.63e-05 7.72e-04  -3.8 7.98e-03  -2.3 1.00e+00 1.00e+00h  1
+  11  8.8886541e-02 1.41e-04 4.68e-03  -5.7 2.37e-02  -2.8 9.59e-01 1.00e+00h  1
+  12  8.7188519e-02 1.36e-03 4.50e-02  -5.7 7.13e-02  -3.2 1.00e+00 1.00e+00h  1
+  13  8.5751907e-02 2.48e-04 3.31e-03  -5.7 2.34e-02  -2.8 1.00e+00 1.00e+00h  1
+  14  8.3446902e-02 2.81e-03 7.51e-02  -5.7 8.64e-02  -3.3 1.00e+00 1.00e+00h  1
+  15  8.1152707e-02 5.17e-04 3.83e-03  -5.7 2.94e-02  -2.9 1.00e+00 1.00e+00h  1
+  16  7.7927552e-02 6.46e-03 1.11e-01  -5.7 1.05e-01  -3.4 1.00e+00 1.00e+00h  1
+  17  7.4389613e-02 1.24e-03 7.48e-03  -5.7 3.88e-02  -2.9 1.00e+00 1.00e+00h  1
+  18  7.0398311e-02 1.56e-02 1.36e-01  -5.7 1.27e-01  -3.4 1.00e+00 1.00e+00h  1
+  19  6.6261303e-02 2.73e-03 1.17e-02  -5.7 6.72e-02  -3.0 1.00e+00 1.00e+00h  1
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+  20  6.3244918e-02 2.15e-02 5.75e-02  -5.7 1.92e-01  -3.5 1.00e+00 1.00e+00h  1
+  21  6.1338846e-02 3.36e-03 2.94e-03  -5.7 9.70e-02  -3.0 1.00e+00 1.00e+00h  1
+  22  6.0097216e-02 1.27e-02 2.94e-03  -5.7 1.82e-01  -3.5 1.00e+00 1.00e+00h  1
+  23  5.8792908e-02 5.97e-02 8.19e-02  -5.7 4.34e-01  -4.0 1.00e+00 1.00e+00h  1
+  24  5.7784653e-02 2.03e-02 3.41e-02  -5.7 3.26e-01    -  1.00e+00 1.00e+00h  1
+  25  5.7667357e-02 2.85e-03 7.08e-03  -5.7 1.34e-01    -  1.00e+00 1.00e+00h  1
+  26  5.7658977e-02 2.02e-04 2.92e-04  -5.7 3.11e-02    -  1.00e+00 1.00e+00h  1
+  27  5.7658864e-02 2.10e-06 5.19e-06  -5.7 3.22e-03    -  1.00e+00 1.00e+00h  1
+  28  5.7658862e-02 1.17e-08 8.83e-08  -8.6 1.94e-04    -  1.00e+00 1.00e+00h  1
+  29  5.7658862e-02 8.53e-14 1.16e-13  -8.6 2.66e-07    -  1.00e+00 1.00e+00h  1
+
+Number of Iterations....: 29
+
+                                   (scaled)                 (unscaled)
+Objective...............:   5.7658861510176719e-02    5.7658861510176719e-02
+Dual infeasibility......:   1.1561809193930182e-13    1.1561809193930182e-13
+Constraint violation....:   3.7810218096069807e-14    8.5265128291212022e-14
+Complementarity.........:   2.5059038338920487e-09    2.5059038338920487e-09
+Overall NLP error.......:   2.5059038338920487e-09    2.5059038338920487e-09
+
+
+Number of objective function evaluations             = 30
+Number of objective gradient evaluations             = 30
+Number of equality constraint evaluations            = 30
+Number of inequality constraint evaluations          = 0
+Number of equality constraint Jacobian evaluations   = 30
+Number of inequality constraint Jacobian evaluations = 0
+Number of Lagrangian Hessian evaluations             = 29
+Total CPU secs in IPOPT (w/o function evaluations)   =      5.316
+Total CPU secs in NLP function evaluations           =      4.308
+
+EXIT: Optimal Solution Found.
+       Iter            |Zi-Zi+1|
+          1 2.0594282954325416e-09
+Iterative optimization converged. Estimating variances now
+   Iteration     Total nfev        Cost      Cost reduction    Step norm     Optimality   
+       0              1         5.3042e-03                                    1.03e-02    
+       1              2         1.3257e-03      3.98e-03       1.00e-02       2.57e-03    
+       2              3         3.3124e-04      9.94e-04       5.00e-03       6.44e-04    
+       3              4         8.2718e-05      2.49e-04       2.50e-03       1.61e-04    
+       4              5         2.0634e-05      6.21e-05       1.25e-03       4.02e-05    
+       5              6         5.1358e-06      1.55e-05       6.25e-04       1.01e-05    
+       6              7         1.2727e-06      3.86e-06       3.12e-04       2.51e-06    
+       7              8         3.1265e-07      9.60e-07       1.56e-04       6.29e-07    
+       8              9         7.5487e-08      2.37e-07       7.81e-05       1.57e-07    
+       9             10         1.7620e-08      5.79e-08       3.90e-05       3.92e-08    
+      10             11         3.8623e-09      1.38e-08       1.95e-05       9.76e-09    
+`gtol` termination condition is satisfied.
+Function evaluations 11, initial cost 5.3042e-03, final cost 3.8623e-09, first-order optimality 9.76e-09.
+# VarianceEstimator: Complete
+
+# VarianceEstimator: All variances provided / concentration problem
+
+# ParameterEstimator: Creating instance
+
+# Warning: Template already populated
+# TemplateBuilder: Preparing model for p_estimator
+WARNING: More finite elements were found in ContinuousSet 'alltime' than the
+    number of finite elements specified in apply. The larger number of finite
+    elements will be used.
+# ParameterEstimator: The variances being used are:
+ {'A': 1.1079347755239156e-05, 'B': 1.1275010048757373e-05, 'C': 1.1064878337164561e-05, 'device': 1.1207488473652162e-05}
+# ParameterEstimator: Solving the parameter fitting problem...
+
+
+# Parameter Values
+             k1 = 3.3286e-01
+             k2 = 1.4704e+00
+
+# ParameterEstimator: Parameter fitting complete
+# KIPET procedure for reaction1 finished
+

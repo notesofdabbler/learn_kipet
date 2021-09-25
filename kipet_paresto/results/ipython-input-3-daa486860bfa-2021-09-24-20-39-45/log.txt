@@ -1,0 +1,60 @@
+########################################
+# KIPET version 1.0.6
+# Date: 2021-09-24-20-39-45
+# File: <ipython-input-3-daa486860bfa>
+# ReactionModel instance: reaction-1
+########################################
+
+# Simulator: Initializing with starting values
+# Simulator: Using the fe method
+# Simulator: Setting up simulation model
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+# Simulator: Completed successfully
+
+# VarianceEstimator: All variances provided / concentration problem
+
+# ParameterEstimator: Creating instance
+
+# Warning: Template already populated
+ReactionModel: Generating base model (self._model)
+# TemplateBuilder: Preparing model for p_estimator
+# TemplateBuilder: Preparing model for p_estimator
+# ParameterEstimator: The variances being used are:
+ {'A': 1e-10, 'B': 1e-11, 'C': 1e-08}
+# ParameterEstimator: Solving the parameter fitting problem...
+
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+WARNING: The solution of the iteration was unsuccessful. The problem is solved with additional solver options.
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+WARNING: The solution of the iteration was unsuccessful. The problem is solved with additional solver options.
+WARNING: Loading a SolverResults object with a warning status into
+    model.name="unknown";
+      - termination condition: other
+      - message from solver: <undefined>
+The current iteration was unsuccessful.
+
+# Parameter Values
+             k1 = 2.0000e+00
+             k2 = 2.0000e-01
+              A = 1.0000e-03
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1773, in run_opt
+    results = self._run_opt_core()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1903, in _run_opt_core
+    self._run_pe_opt()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1687, in _run_pe_opt
+    self._run_opt('p_estimator', **pe_settings)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1942, in _run_opt
+    self.results_dict[estimator] = getattr(self, estimator).run_opt(*args, **kwargs)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 192, in run_opt
+    return self._get_results()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 217, in _get_results
+    raise Exception("The current iteration was unsuccessful.")
+Exception: The current iteration was unsuccessful.

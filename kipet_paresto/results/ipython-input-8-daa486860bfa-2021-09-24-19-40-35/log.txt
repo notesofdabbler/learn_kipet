@@ -1,0 +1,66 @@
+########################################
+# KIPET version 1.0.6
+# Date: 2021-09-24-19-40-35
+# File: <ipython-input-8-daa486860bfa>
+# ReactionModel instance: reaction-1
+########################################
+
+# Simulator: Initializing with starting values
+# Simulator: Using the fe method
+# Simulator: Setting up simulation model
+# TemplateBuilder: Preparing model for simulator
+# Simulator: Finished creating simulator
+# Simulator: Completed successfully
+
+# VarianceEstimator: All variances provided / concentration problem
+
+# ParameterEstimator: Creating instance
+
+# Warning: Template already populated
+ReactionModel: Generating base model (self._model)
+# TemplateBuilder: Preparing model for p_estimator
+# TemplateBuilder: Preparing model for p_estimator
+# ParameterEstimator: The variances being used are:
+ {'A': 1e-10, 'B': 1e-11, 'C': 1e-08}
+# ParameterEstimator: Solving the parameter fitting problem...
+
+<bound method _VarData.to_string of <pyomo.core.base.var._GeneralVarData object at 0x7f3410cc8160>> False
+<bound method _VarData.to_string of <pyomo.core.base.var._GeneralVarData object at 0x7f3410cc81c0>> False
+<bound method _VarData.to_string of <pyomo.core.base.var._GeneralVarData object at 0x7f3410cc83a0>> False
+        0.14 seconds required to write file
+        0.14 seconds required for presolve
+Solver log file: 'k_aug_hess'
+Solver solution file: '/tmp/tmplkiw10cs.pyomo.sol'
+Solver problem files: ('/tmp/tmplkiw10cs.pyomo.nl',)
+        0.84 seconds required for solver
+        0.00 seconds required to read logfile 
+        0.01 seconds required to read solution file
+        0.14 seconds required for postsolve
+[K_AUG] written by D.T. @2018
+
+: Unknown keyword "print_kkt"
+Unknown keyword "print_kkt"
+ERROR: Solver (asl) returned non-zero return code (1)
+ERROR: See the solver log above for diagnostic information.
+Traceback (most recent call last):
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1773, in run_opt
+    results = self._run_opt_core()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1903, in _run_opt_core
+    self._run_pe_opt()
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1687, in _run_pe_opt
+    self._run_opt('p_estimator', **pe_settings)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/main_modules/reaction_model.py", line 1942, in _run_opt
+    self.results_dict[estimator] = getattr(self, estimator).run_opt(*args, **kwargs)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 181, in run_opt
+    self.objective_value = self._solve_model(
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 350, in _solve_model
+    obj_val = self.optimize(model, sigma_sq)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 534, in optimize
+    self.covariance(optimizer, sigma_sq)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/parameter_estimator.py", line 562, in covariance
+    self.inv_hessian, self.inv_hessian_reduced = covariance_k_aug(self.model, None, self.comps['unknown_absorbance'], self.param_names_full, self.ncp)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/kipet/estimator_tools/reduced_hessian_methods.py", line 366, in covariance_k_aug
+    k_aug.solve(optimization_model, tee=True)
+  File "/home/paperspace/anaconda3/envs/ckipetenv/lib/python3.8/site-packages/Pyomo-5.7.3-py3.8-linux-x86_64.egg/pyomo/opt/base/solvers.py", line 601, in solve
+    raise ApplicationError(
+pyutilib.common._exceptions.ApplicationError: Solver (asl) did not exit normally
